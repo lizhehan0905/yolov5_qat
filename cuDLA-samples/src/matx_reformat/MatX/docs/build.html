@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Building MatX &#8212; matx  documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quick Start" href="quickstart.html" />
+    <link rel="prev" title="Welcome to MatX’s documentation!" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">matx  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Building MatX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quickstart.html">
+   Quick Start
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="creation.html">
+   Creating Tensors
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="api/index.html">
+   API Reference
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/tensorview.html">
+     Tensors
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="api/transformations.html">
+     Tensor Transformations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/fft.html">
+       FFT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/matmul.html">
+       Matrix Multiply (GEMM)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/solver.html">
+       Linear Solvers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/inverse.html">
+       Matrix Inverse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/filter.html">
+       Filtering (IIR and FIR)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/reduce.html">
+       Reductions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/sort.html">
+       Sorting
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/tensorops.html">
+     Tensor Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/tensorgenerators.html">
+     Generator Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/stats.html">
+     Statistics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/random.html">
+     Random Number Generation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/utilities.html">
+     Utilities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/type_traits.html">
+     Type Traits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/einsum.html">
+     einsum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/nvtx.html">
+     NVTX Profiling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matlabpython.html">
+   MATLAB/Python To MatX Translation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="examples/index.html">
+   Example Applications
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples/fftconv.html">
+     FFT Convolution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="limitations.html">
+   Limitations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/build.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Building MatX
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#system-requirements">
+     System Requirements
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#required-third-party-dependencies">
+     Required Third-party Dependencies
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-third-party-dependencies">
+     Optional Third-party Dependencies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-options">
+   Build Options
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-tests">
+     Unit tests
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#benchmarks">
+     Benchmarks
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation">
+     Documentation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matx-library-linking">
+   MatX Library Linking
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matx-in-offline-environments">
+   MatX in Offline Environments
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="building-matx">
+<span id="building"></span><h1>Building MatX<a class="headerlink" href="#building-matx" title="Permalink to this headline"></a></h1>
+<p>As MatX is a header-only library, using it in your own projects is as simple as including only the core <code class="docutils literal notranslate"><span class="pre">matx.h</span></code> file.
+The <code class="docutils literal notranslate"><span class="pre">matx.h</span></code> include file gives full functionality of all MatX features, without requiring additional includes or API
+dependencies that the user must navigate. All classes required to use the MatX API is available from the <code class="docutils literal notranslate"><span class="pre">matx.h</span></code> include;
+This includes arithmetic expressions, and all libraries included with CUDA (cuFFT, cuBLAS, CUB, cuSolver, cuRAND).
+Optional features of MatX that require downloading separate libraries use additional include files to
+be explicit about their requirements.</p>
+<p>The MatX CMake build configuration is intented to help download any libraries for both the required and optional features.
+The <a class="reference external" href="https://github.com/cpm-cmake/CPM.cmake">CPM</a> build system is used to help with package management and version control. By default, CPM will fetch other packages
+from the internet. Alternatively, the option <code class="docutils literal notranslate"><span class="pre">CPM_USE_LOCAL_PACKAGES</span></code> can be used to point to local downloads in an air-gapped
+or offline environment. Choosing local versions of packages uses the typical <code class="docutils literal notranslate"><span class="pre">find_packages</span></code> CMake search methods. Please see
+the <a class="reference external" href="https://github.com/cpm-cmake/CPM.cmake">CPM</a> documentation or the documentation for each package for more information.</p>
+<section id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline"></a></h2>
+<p>MatX requires <strong>CUDA 11.4</strong> or higher, and <strong>g++ 9.3</strong> or higher for the host compiler. Clang may work as well, but it’s currently
+untested. Other requirements for optional components are listed below.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using MatX with an unsupported compiler may result in compiler and/or runtime errors.</p>
+</aside>
+</section>
+<section id="required-third-party-dependencies">
+<h2>Required Third-party Dependencies<a class="headerlink" href="#required-third-party-dependencies" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/cpm-cmake/CPM.cmake">CPM</a> (this is included in the project source, so does not require a separate download)</p></li>
+<li><p><a class="reference external" href="https://github.com/fmtlib/fmt">fmt</a> (CPM dependency)</p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json">nloghmann::json</a> (CPM dependency)</p></li>
+<li><p><a class="reference external" href="https://github.com/rapidsai/rapids-cmake">rapids-cmake</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NVIDIA/libcudacxx">libcudacxx</a></p></li>
+</ul>
+</section>
+<section id="optional-third-party-dependencies">
+<h2>Optional Third-party Dependencies<a class="headerlink" href="#optional-third-party-dependencies" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/google/googletest">GoogleTest</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NVIDIA/nvbench">nvbench</a></p></li>
+<li><p><a class="reference external" href="https://developer.nvidia.com/cutensor">cutensor</a></p></li>
+<li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuquantum/cutensornet">cutensornet</a></p></li>
+</ul>
+</section>
+</section>
+<section id="build-options">
+<h1>Build Options<a class="headerlink" href="#build-options" title="Permalink to this headline"></a></h1>
+<p>MatX provides 5 primary options for builds, and each can be configured independently:</p>
+<table class="table">
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>CMake Option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unit Tests</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_TESTS=ON</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Benchmarks</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_BENCHMARKS=ON</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Examples</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_EXAMPLES=ON</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Documentation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_DOCS=ON</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>NVTX Flags</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-DMATX_NVTX_FLAGS=ON</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Everything but documentation requires building MatX source code, and all requirements in the first section of this document apply.
+Building documentation will be covered later in this document.</p>
+<section id="unit-tests">
+<h2>Unit tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline"></a></h2>
+<p>MatX unit tests are compiled using <strong>Google Test</strong> as the test framework, and <strong>pybind11</strong> for verification. pybind11 provides an interface
+to compare common Numpy and Scipy results with MatX without reimplementing complex functionality in C++. Required versions for these
+libraries are:</p>
+<p><strong>Google test</strong>: 1.11+</p>
+<p><strong>pybind11</strong>: 2.6.2</p>
+<p>Both Google Test and pybind11 will be automatically downloaded by CPM when unit tests are enabled. If an offline copy of them exists,
+<code class="docutils literal notranslate"><span class="pre">CPM_USE_LOCAL_PACKAGES</span></code> can be used to override the download.</p>
+<p>To build unit tests, pass the argument <code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_TESTS=ON</span></code> to CMake to configure the build environment, then issue:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make -j <span class="nb">test</span>
+</pre></div>
+</div>
+<p>This will compile and run all unit tests. For more control over which tests to run, you may run test/matx_test directly with parameters
+defined by Google Test (<a class="reference external" href="https://github.com/google/googletest">https://github.com/google/googletest</a>). To run matx_test directly, you must be inside the build/test directory
+for the correct paths to be set. For example, to run only tests with the name FFT:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>test/matx_test --gtest_filter<span class="o">=</span><span class="s2">&quot;*FFT*&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<p>MatX provides several example applications that show different capabilities of MatX. When the <code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_EXAMPLES=ON</span></code> CMake argument
+is specified the <code class="docutils literal notranslate"><span class="pre">build/examples</span></code> directory will contain a separate binary file for each example. Each example can be run by simply
+executing the binary.</p>
+</section>
+<section id="benchmarks">
+<h2>Benchmarks<a class="headerlink" href="#benchmarks" title="Permalink to this headline"></a></h2>
+<p>MatX uses the NVBench software for the benchmarking framework. Like other packages, NVBench will be download using CPM according to
+the methods mentioned above.</p>
+<p>NVBench has a small library that will be compiled on the first <cite>make</cite> run. Benchmarks can be run using the <code class="docutils literal notranslate"><span class="pre">bench/matx_bench</span></code> executable,
+and all options to filter or modify benchmark runs can be found in the <a class="reference external" href="https://github.com/NVIDIA/nvbench">nvbench</a> project documentation.</p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+<p>Building documentation has a separate list of requirements from all other build types. MatX requires the following packages to build
+documentation:</p>
+<p><strong>Breate</strong>: 4.31.0</p>
+<p><strong>Doxygen</strong>: 1.9.1</p>
+<p><strong>Sphinx</strong>: 4.3.1</p>
+<p><strong>sphinx-book-theme</strong>: 0.1.7</p>
+<p><strong>libjs-mathjax</strong></p>
+<p><strong>texlive-font-utils</strong></p>
+<p>Building documentation must be done separately from other build options as to minimize the requirements needed. After configuring CMake with
+<code class="docutils literal notranslate"><span class="pre">-DMATX_BUILD_DOCS=ON</span></code> and typing <code class="docutils literal notranslate"><span class="pre">make</span></code>, Doxygen, Sphinx, and Breathe will parse the source to build the documentation. Once complete, a
+directory <code class="docutils literal notranslate"><span class="pre">build/docs_input/sphinx</span></code> will be created containing all documentation files, and an <code class="docutils literal notranslate"><span class="pre">index.html</span></code> entry point that can be used
+to browse the documentation. Note that the most recent version of the documentation is also hosted at:</p>
+<p><a class="reference external" href="https://nvidia.github.io/MatX/">https://nvidia.github.io/MatX/</a></p>
+</section>
+</section>
+<section id="matx-library-linking">
+<h1>MatX Library Linking<a class="headerlink" href="#matx-library-linking" title="Permalink to this headline"></a></h1>
+<p>MatX defaults to Hidden Visibility due to compile requirements from pybind (<a class="reference external" href="https://pybind11.readthedocs.io/en/stable/faq.html#someclass-declared-with-greater-visibility-than-the-type-of-its-field-someclass-member-wattributes">https://pybind11.readthedocs.io/en/stable/faq.html#someclass-declared-with-greater-visibility-than-the-type-of-its-field-someclass-member-wattributes</a>).
+Hidden Visibility hides symbols from the C++ linker, and will prevent a user from accessing functions from other translation units. If inheriting the MatX Build system, this will also prevent user-space symbols from being enabled, which may be a problem for multi-library or resource projects intended
+to be linked by later users. Visibility settings can be changed in the user’s build environment, or specific symbols can be enabled through the C++ visibility support features (<a class="reference external" href="https://gcc.gnu.org/wiki/Visibility">https://gcc.gnu.org/wiki/Visibility</a>).</p>
+</section>
+<section id="matx-in-offline-environments">
+<h1>MatX in Offline Environments<a class="headerlink" href="#matx-in-offline-environments" title="Permalink to this headline"></a></h1>
+<p>The MatX build system and CPM provide an easy-to-use mechanism to build projects using MatX in computing environments that do not have access to the internet.
+As described earlier, CPM provides a convenient mechanism to identify and locally cache all of the required third-party dependencies, which can
+then be packaged and delivered to offline systems manually. It is easy to package a build of MatX in preparation of deployment to closed area, all you need is
+an internet-enabled computer to prepare your package. The steps below outline the process for preparing your package, compressing it for transfer to your system,
+and building on the offline system.</p>
+<ul>
+<li><p>Clone the MatX repository on an internet-enabled environment (this does not need to be identical to the deployment environment, but is simpler if it is / can build MatX)</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:NVIDIA/MatX.git
+</pre></div>
+</div>
+</li>
+<li><p>Determine the location you would like to build the CPM cache at, and export the variable.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> CPM_SOURCE_CACHE <span class="nv">$HOME_ONLINE</span>/matx_cpm_cache
+</pre></div>
+</div>
+</li>
+<li><p>Build MatX with the build options required by your project, following the steps outlined above</p></li>
+<li><p>TAR and Compress the CPM cache for easy transport</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar -czvf matx_cache_VERS_NUM_.tar.gz <span class="nv">$HOME_ONLINE</span>/matx_cpm_cache
+</pre></div>
+</div>
+</li>
+<li><p>Transfer MatX Source code and CPM cache to your offline system</p></li>
+<li><p>Uncompress your cache TAR in a location available while building MatX</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar -xvf matx_cache_VERS_NUM_.tar.gz  <span class="nv">$HOME_OFFLINE</span>
+</pre></div>
+</div>
+</li>
+<li><p>Export the CPM_SOURCE_CACHE to your environment before building MatX</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> CPM_SOURCE_CACHE <span class="nv">$HOME_OFFLINE</span>/matx_cpm_cache
+</pre></div>
+</div>
+</li>
+<li><p>Build your MatX project per your standard process, CPM will automatically use the cache</p></li>
+</ul>
+</section>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to MatX’s documentation!</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="quickstart.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quick Start</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Nvidia<br/>
+        
+            &copy; Copyright 2021, Nvidia.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+ 
+
+  <style>
+         .wy-nav-content { max-width: 1600px; }
+         .wy-table-responsive table td, .wy-table-responsive table th {
+            white-space: normal;
+          }          
+  </style>
+
+
+  </body>
+</html>
